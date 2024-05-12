@@ -3,7 +3,7 @@
 exports.up = async function (knex) {
   // DO YOUR MAGIC
   await knex.schema.createTable("cars", table => {
-    table.increments("carsId");
+    table.increments("id");
     table.string("vin", 12).notNullable().unique();
     table.string("make", 20).notNullable()
     table.string("model", 20).notNullable()
